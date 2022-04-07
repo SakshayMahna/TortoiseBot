@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+	<param name="robot_description" textfile="$(find tortoisebot)/urdf/tortoisebot_4.urdf"/>
+	
+	<include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+	
+	<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+	      args="-param robot_description -urdf -model tortoisebot"/>
+</launch>
